@@ -1,0 +1,15 @@
+{
+  "version": "3.0",
+  "name": "Yoga Guide",
+  "description": "A complete yoga guide specially for girls, all types of yoga are defined in well categorize manner, with step by step instructions, Advantages, Contraindication and cautions",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/icons/logo128.png",
+    "60": "/icons/logo60.png"
+  },
+  "developer": {
+    "name": "Lavish Aggarwal",
+    "url": "http://about.me/lavish"
+  },
+  "default_locale": "en"
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" type="text/css" href="css/ootstrap.min.css">
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<style type="text/css">
+		.vision{
+			font-size: 15px;
+			font-weight: 400;
+			color: #2F5A35;
+		}
+		#result,#text{text-align: center;}
+		#result{font-size: 1.5em; margin-top: .6em;}
+		#text{font-size: 1.5em;}
+
+		</style>
+
+	</head>
+	<body>
+
+			<div class="view_port">
+			  <div class="polling_message">
+			    BMI
+			  </div>
+			  <div class="cylon_eye"></div>
+			</div>
+			<nav class="navbar navbar-inverse" role="navigation">
+			  <div class="container-fluid">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" href="#">Menu</a>
+			    </div>
+			    
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav">
+			        <li><a href="index.html">Home</a></li>
+			        <li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Category <b class="caret"></b></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="seated.html">Seated &amp; Twisted</a></li>
+			            <li><a href="standing.html">Standing</a></li>
+			            <li><a href="arm.html">Arm Balances</a></li>
+			            <li><a href="core.html">Core</a></li>
+			            <li><a href="back.html">Back Bends</a></li>
+			            <li><a href="forward.html">Forward Bends</a></li>
+			            <li><a href="inversions.html">Inversions</a></li>
+			            <li><a href="restorative.html">Restorative</a></li>
+			            <li><a href="meditation.html">Meditation</a></li>
+			            <li><a href="pranayama.html">pranayama</a></li>
+			            <li><a href="mudra.html">Mudra &amp; Bandha</a></li>
+			          </ul>
+			        </li>
+			        <li class="divider"></li>
+			        <li class="active"><a href="bmi.html">BMI Calculator</a></li>
+			        <li><a href="about.html">About</a></li>
+			      </ul>
+			        </li>
+			      </ul>
+			    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+			</nav>
+			<ol class="breadcrumb animated fadeInRight">
+			  <li><a href="index.html">Home</a></li>
+			  
+			  <li class="active">BMI Calculator</li>
+			</ol>
+		<div ="rest">
+			<section>
+				<div id="main_index">
+				
+				</div>
+				<article class="animated fadeInLeft container" id="index_article">						
+					<form role="form">
+					  <div class="form-group">
+					    <label class="vision">Your Height (in)</label>
+					    <input type="number" class="form-control" id="height" placeholder="Enter Your Height (Inches)">
+					  </div>
+					  <div class="form-group">
+					    <label class="vision">Your Weight(Kgs)</label>
+					    <input type="number" class="form-control" id="weight" placeholder="Enter Your Weight (Kg)">
+					  </div>
+					</form>
+					<button class="btn btn-primary btn-block"  id="bmi" style="font-size:1.3em">Calculate</button>
+					<div id="result" class="animated fadeInLeft"></div>
+					<div id="text" class=""></div>
+
+				</article>
+			</section>
+		</div>
+		<script type="text/javascript">
+		document.getElementById('bmi').addEventListener('click',calculate);
+		function calculate(){
+			var inc = document.getElementById('height').value;
+			var k = document.getElementById('weight').value;
+			m = inc/39.3701;
+			var text = document.getElementById('text');
+			var result = document.getElementById('result');
+			var bmi = k/(m*m);
+			//document.getElementById('result').innerHTML = bmi;
+			if(bmi<15){
+				result.innerHTML = "BMI : "+Math.floor(bmi*100)/100;
+				text.innerHTML = 'Very Severly Underweight';
+				result.className = "animated flash alert-danger";
+				text.className = "animated flash alert-danger";
+			}
+			else if(bmi>=15.0 && bmi<16.0){
+				result.innerHTML = "BMI : "+Math.floor(bmi*100)/100;
+				text.innerHTML = 'Severely Underweight';
+				result.className = "animated pulse alert-warning";
+				text.className = "animated pulse alert-warning";
+			}
+			else if(bmi>=16.0 && bmi<18.5){
+				result.innerHTML = "BMI : "+Math.floor(bmi*100)/100;
+				text.innerHTML = 'Underweight';
+				result.className = "animated rollIn alert-info";
+				text.className = "animated rollIn alert-info";
+			}
+			else if(bmi>=18.5 && bmi<25){
+				result.innerHTML = "BMI : "+Math.floor(bmi*100)/100;
+				text.innerHTML = 'Normal';
+				result.className = "animated fadeIn alert-success";
+				text.className = "animated fadeIn alert-success";
+			}
+			else if(bmi>=25 && bmi<30){
+				result.innerHTML = "BMI : "+Math.floor(bmi*100)/100;
+				text.innerHTML = 'Over Weight';
+				result.className = "animated rollIn alert-info";
+				text.className = "animated rollIn alert-info";
+			}
+			else if(bmi>=30 && bmi<35){
+				result.innerHTML = "BMI : "+Math.floor(bmi*100)/100;
+				text.innerHTML = 'Moderately Obese';
+				result.className = "animated pulse alert-warning";
+				text.className = "animated pulse alert-warning";
+			}
+			else if(bmi>=35 && bmi<40){
+				result.innerHTML = "BMI : "+Math.floor(bmi*100)/100;
+				text.innerHTML = 'Severely Obese';
+				result.className = "animated pulse alert-warning";
+				text.className = "animated pulse alert-warning";
+			}
+			else if(bmi>=40){
+				result.innerHTML = "BMI : " + Math.floor(bmi*100)/100;
+				text.innerHTML = 'Very Severely Obese';
+				result.className = "animated flash alert-danger";
+				text.className = "animated flash alert-danger";
+			}
+			else{
+				alert('Please Enter Correct Measurements');
+			}
+		}
+		</script>
+	</body>
+</html>

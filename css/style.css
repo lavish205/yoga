@@ -1,0 +1,91 @@
+*{
+	margin:0px;
+	padding: 0px;
+	font-family: sans-serif;
+	-moz-user-select :none;
+	-moz-box-sizing : border-box;
+  outline: 0!important;
+}
+
+ul,li,a{text-decoration: none !important;}
+
+li span{text-align: center;margin-left: 43%;}
+#rest{
+	float: left;
+	width: 100%;
+	margin-top: 0px;
+}
+.polling_message {
+  color:white;
+  float:left;
+  margin-right:2%;          
+  font-size: 35px;
+  width: 100%;
+  text-align: center;
+}
+
+.view_port {
+  background-color:black;
+  height:45px;
+  width:100%;
+  overflow: hidden;
+}
+
+h1{
+	font-size: 2em;
+	margin: 0.67em 0px;
+}
+p{
+	margin: 1em;
+}
+.cylon_eye {
+  color:white;
+  height: 100%;
+  width: 20%;
+
+  background-color: #457;
+  background-image: -webkit-linear-gradient(left, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
+  background-image:    -moz-linear-gradient(left, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
+  background-image:     -ms-linear-gradient(left, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
+  background-image:      -o-linear-gradient(left, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
+  background-image:         linear-gradient(to right, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
+
+  -webkit-animation: move_eye 4s linear 0s infinite alternate;
+     -moz-animation: move_eye 4s linear 0s infinite alternate;
+       -o-animation: move_eye 4s linear 0s infinite alternate;
+          animation: move_eye 4s linear 0s infinite alternate;
+}
+
+@-webkit-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
+   @-moz-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
+     @-o-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
+        @keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
+
+article{
+	margin: 7px;
+}
+/*Category.html*/
+.img{
+	display: inline-block;
+	border-radius: 5px;
+	border:2px solid #456 !important;
+	box-shadow: 4px 4px 4px #7c7c7c;
+	margin: 5px;
+
+}
+.img-circle{
+	border: 1px solid #ccc;
+}
+.img_text{
+	width: 100px;
+	float: left;
+	margin: 5px;
+}
+@media screen and (max-width:451px){
+	.img{
+		margin-left: 50px !important;
+	}
+}
+.step,.caution,.advantage{
+	cursor: pointer;
+}
