@@ -6,7 +6,7 @@
 	-moz-box-sizing : border-box;
   outline: 0!important;
 }
-
+li .img-circle{float: right;}
 ul,li,a{text-decoration: none !important;}
 
 li span{text-align: center;margin-left: 43%;}
