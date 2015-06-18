@@ -18,7 +18,7 @@ li span{text-align: center;margin-left: 43%;}
 .polling_message {
   color:white;
   float:left;
-  margin-right:2%;          
+  margin-right:2%;
   font-size: 35px;
   width: 100%;
   text-align: center;
@@ -105,4 +105,12 @@ article{
 }
 .btn.btn-info.pull-left ,.btn.btn-info.pull-right{
   margin-bottom: 10px !important;
+}
+
+.panel-body ul{
+	margin-left: 10px;
+}
+
+body{
+	overflow-x: hidden;
 }
